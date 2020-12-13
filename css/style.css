@@ -1,0 +1,205 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+:root{
+    --primaria: #243B55;
+    --primaria-dark: #141E30; 
+}
+
+/* ================ Universais ================ */
+
+section{
+    height: 100vh;
+}
+
+.row{
+    height: 100%;
+}
+
+/* ================ Header ================ */
+
+header{
+    background-color: var(--primaria-dark);
+    height: 80px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0 0 25px 0;
+    position: fixed;
+    z-index: 5;
+}
+
+    header > .row{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        padding: 0 80px;
+        position: relative;
+    }
+
+    .left-header-links{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        min-width: 470px;
+        height: 100%;
+    }
+
+        .left-header-links > a{
+            display: flex;
+            align-items: center;
+            color: white;
+            font-size: 1rem;
+            font-weight: 400;
+            text-decoration: none !important;
+            height: 60%;
+            border-top: 4px solid rgba(255, 255, 255, 0);
+            border-bottom: 4px solid rgba(255, 255, 255, 0);
+            margin: 0 15px;
+            padding: 0 15px;
+            transition: all .2s ease-out;
+        }
+        .left-header-links > a:hover{
+            color: rgb(182, 178, 178);
+            background-color: #192438;
+            height: 100%;
+            border-top: 4px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 4px solid rgba(255, 255, 255, 0.7);
+        }
+
+    .middle-header-logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        text-align: center;
+        width: 140px;
+        height: 120px;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        box-shadow: rgba(0, 0, 0, 0.4) 0 5px 10px 0;
+        margin-left: auto;
+        margin-right: auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+
+        .middle-header-logo > img{
+            margin: auto 0 !important;
+        }
+
+    .right-header-links{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        min-width: 470px;
+        height: 100%;
+    }
+
+        .right-header-links > a{
+            display: flex;
+            align-items: center;
+            color: white;
+            font-size: 1rem;
+            font-weight: 400;
+            text-decoration: none !important;
+            height: 60%;
+            border-top: 4px solid rgba(255, 255, 255, 0);
+            border-bottom: 4px solid rgba(255, 255, 255, 0);
+            margin: 0 15px;
+            padding: 0 15px;
+            transition: all .2s ease-out;
+        }
+        .right-header-links > a:hover{
+            color: rgb(182, 178, 178);
+            background-color: #192438;
+            height: 100%;
+            border-top: 4px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 4px solid rgba(255, 255, 255, 0.7);
+        }
+
+/* ================ Main Banner ================ */
+
+main.main-banner{
+    background: conic-gradient(from 180deg at 50% 50%, #141E30 0deg, #18263A 30deg, #243B55 360deg);
+    height: 100vh;
+}
+
+    .main-banner-title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main-banner-title > h1{
+        color: whitesmoke;
+        font-size: 4rem;
+        font-weight: bold;
+    }
+
+    .main-banner-title > p{
+        color: #9DDCFF;
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+
+/* ================ About me ================ */
+
+.about-me{
+    background-color: var(--primaria-dark);
+}
+
+    .about-me-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 100px !important;
+    }
+
+        .about-me-text > h2{
+            color: whitesmoke;
+            font-size: 2.6rem;
+            margin: 25px 0;
+        }
+
+        .about-me-text > p{
+            color: #9DDCFF;
+        }
+
+    .about-me-images{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .profile-square{
+            background: #243B55;
+            width: 350px;
+            height: 420px;
+            border-radius: 92px;
+            transform: rotate(30deg);
+            position: relative;
+            z-index: auto;
+        }
+
+        .profile-square:before{
+            content: "";
+            background: no-repeat center/cover url(../images/pp.jpg);
+            width: 100%;
+            height: 100%;
+            border-radius: 92px;
+            transform: rotate(-20deg);
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: -1 !important;
+        }
